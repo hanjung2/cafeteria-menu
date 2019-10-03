@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SpecialService } from 'src/app/services/special.service';
+import { MenuService } from 'src/app/services/menu.service';
 
 @Component({
   selector: 'app-home',
@@ -7,12 +7,11 @@ import { SpecialService } from 'src/app/services/special.service';
   styleUrls: ['./home.component.less']
 })
 export class HomeComponent implements OnInit {
-  private todaySpecial:string;
-  constructor(private specialService: SpecialService) { }
+  constructor(private menuService: MenuService) {
+  
+  }
 
   ngOnInit() {
-    this.todaySpecial = this.specialService.getSpecial();
-    console.log(this.todaySpecial)
   }
 
 }

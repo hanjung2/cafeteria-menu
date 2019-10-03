@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="special">
+    <h1 class="special-announcement">Today specials are {{todaySpecial}} </h1>
+  </div>
+  <div class="deli">
+    <h1>Deli Options</h1>
+    <div class="bread">
+      <h3>Breads:</h3>
+      <ul>
+        <li *ngFor="let bread of breadOptions"> {{bread}} </li>
+      </ul>
+    </div>
+    <div class="cheese">
+        <h3>Cheese:</h3>
+      <ul>
+        <li *ngFor="let cheese of cheeseOptions"> {{cheese}} </li>
+      </ul>
+    </div>
+    <div class="topping">
+        <h3>Topping:</h3>
+      <ul>
+        <li *ngFor="let topping of toppingOptions"> {{topping}} </li>
+      </ul>
+    </div>
+    <div class="protein"><h3>Protein:</h3>
+      <ul>
+        <li *ngFor="let protein of proteinOptions"> {{protein}} </li>
+      </ul>
+    </div>
+    <div class="sauce"><h3>Sauce:</h3>
+      <ul>
+        <li *ngFor="let sauce of sauceOptions"> {{sauce}} </li>
+      </ul>
+    </div>
+  </div>
+</div>
