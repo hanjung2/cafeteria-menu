@@ -3,33 +3,39 @@
     <h1 class="special-announcement">Today specials are {{todaySpecial}} </h1>
   </div>
   <div class="deli">
-    <h1>Deli Options</h1>
+    <h1>Deli</h1>
+    <h4>All Sandwiches are $5.30 and include lettuce tomato pickle and your choice of Yukon Crispers, Fresh Apple Slices, Baby Carrots or Side Salad</h4>
     <div class="bread">
       <h3>Breads</h3>
       <ul>
-        <li *ngFor="let bread of breadOptions"> {{bread}} </li>
+        <li (click)="addSelected(bread)" *ngFor="let bread of breadOptions"> {{bread}} </li>
       </ul>
     </div>
     <div class="cheese">
         <h3>Cheese</h3>
       <ul>
-        <li *ngFor="let cheese of cheeseOptions"> {{cheese}} </li>
+        <li (click)="addSelected(cheese)" *ngFor="let cheese of cheeseOptions"> {{cheese}} </li>
       </ul>
     </div>
     <div class="topping">
         <h3>Topping</h3>
       <ul>
-        <li *ngFor="let topping of toppingOptions"> {{topping}} </li>
+        <li (click)="addSelected(topping)" *ngFor="let topping of toppingOptions"> {{topping}} </li>
       </ul>
     </div>
     <div class="protein"><h3>Protein</h3>
       <ul>
-        <li *ngFor="let protein of proteinOptions"> {{protein}} </li>
+        <li (click)="addSelected(protein)" *ngFor="let protein of proteinOptions"> {{protein}} </li>
       </ul>
     </div>
     <div class="sauce"><h3>Sauce</h3>
       <ul>
-        <li *ngFor="let sauce of sauceOptions"> {{sauce}} </li>
+        <li (click)="addSelected(sauce)" *ngFor="let sauce of sauceOptions"> {{sauce}} </li>
+      </ul>
+    </div>
+    <div class="my-deli"><h3>My Selected Deli Options</h3>
+      <ul>
+        <li *ngFor="let option of selectedDeliOptions">{{option}}</li>
       </ul>
     </div>
   </div>

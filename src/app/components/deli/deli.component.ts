@@ -13,6 +13,7 @@ export class DeliComponent implements OnInit {
   public sauceOptions: string[];
   public proteinOptions: string[];
   public toppingOptions: string[];
+  public selectedDeliOptions: string[];
   private deliOptions;
   constructor(private menuService: MenuService) {
     this.todaySpecial = this.menuService.getSpecial();
@@ -22,9 +23,29 @@ export class DeliComponent implements OnInit {
     this.sauceOptions = this.deliOptions.Sauce;
     this.proteinOptions = this.deliOptions.Protein;
     this.toppingOptions = this.deliOptions.Topping;
+    this.selectedDeliOptions = [];
   }
 
   ngOnInit() {
+  }
+
+  addSelected(item) {
+    this.breadOptions = this.breadOptions.filter((value) => {
+      return value != item
+    });
+    this.cheeseOptions = this.cheeseOptions.filter((value) => {
+      return value != item
+    });
+    this.sauceOptions = this.sauceOptions.filter((value) => {
+      return value != item
+    });
+    this.proteinOptions = this.proteinOptions.filter((value) => {
+      return value != item
+    });
+    this.toppingOptions = this.toppingOptions.filter((value) => {
+      return value != item
+    });
+    this.selectedDeliOptions.push(item);
   }
 
 }
