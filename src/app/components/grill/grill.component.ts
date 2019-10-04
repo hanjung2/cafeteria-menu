@@ -7,7 +7,7 @@ import { MenuService } from 'src/app/services/menu.service';
   styleUrls: ['./grill.component.less']
 })
 export class GrillComponent implements OnInit {
-  private grillOptions: any;
+  public grillOptions: any;
   constructor(private menuService: MenuService) {
     this.grillOptions = this.menuService.getGrillOptions();
    }

@@ -7,12 +7,12 @@ import { MenuService } from 'src/app/services/menu.service';
   styleUrls: ['./deli.component.less']
 })
 export class DeliComponent implements OnInit {
-  private todaySpecial: string;
-  private breadOptions: string[];
-  private cheeseOptions: string[];
-  private sauceOptions: string[];
-  private proteinOptions: string[];
-  private toppingOptions: string[];
+  public todaySpecial: string;
+  public breadOptions: string[];
+  public cheeseOptions: string[];
+  public sauceOptions: string[];
+  public proteinOptions: string[];
+  public toppingOptions: string[];
   private deliOptions;
   constructor(private menuService: MenuService) {
     this.todaySpecial = this.menuService.getSpecial();
